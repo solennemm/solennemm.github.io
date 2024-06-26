@@ -57,9 +57,14 @@
 							<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
 
 							<h3>The Assignment</h3>
-							<p>The aim of this assignment is to create a choropleth map using one of the United Nations Sustainable Development Goals (SDGs) indicator data and QGIS. By mapping SDG indicators, we can identify trends and patterns that may not be as clear from raw data and use this knowledge to inform policy and decision making. As such, the assignment not only helps in learning how to use QGIS for the first time, it also helps understand regional variations in the indicator of choice. </p>
+							<p>The aim of this assignment is to create a Relative Elevation Model (REM) derive from a Digital Terrain Model (DEM), in turn derived from LiDAR data). A Relative Elevation Model is a representation of the elevation of the terrain relative to a specific reference level, typically a wild river or stream bed. In this way, it is different from a DEM –which shows absolute elevation values– as a REM highlights the relative heights of terrain features, making it easier to understand the topographic context of a landscape. Although typically used for monitoring wild rivers, they can help in assessing areas susceptible to flooding in highly controlled river enviornments like those in the Netherlands. </p>
 
 							<h2>The Process</h2>
+							<p> 1. I selected Texel as the mapping area because I wanted to see how the dykes and the National Park Dunes of Texel would impact the elevation of the river and nearby towns, as well as the risk of flooding of the Buitenzwim river. 
+								2. I downloaded the DTM geofiles and uploaded them onto ArcGIS; then merged them to create one continous raster, thus simplifying analysis and visualization of the data. 
+								3. I adjusted the stretch and color scheme for increasec clarity, and ensure the river elevation was set to 0 as a reference point
+							</p>
+
 							<h3>Data Collection</h3>
 							<p>Global data was obtained from Blackboard to form the base world map. SDG indicator data for 10.7.4 was sourced from the UN Stats Open SDG Data 	Hub, covering the years 2000-2014.</p>
 
