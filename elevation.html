@@ -52,21 +52,27 @@
 						<div class="inner">
 							<h1>Elevation Models </h1>
 							<span class="image main"><img src="images/pic16.jpg" alt="" /></span>
-							<p>TRIAL eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique.</p>
-
 							<h3>The Assignment</h3>
-							<p>The aim of this assignment is to create a Relative Elevation Model (REM) derive from a Digital Terrain Model (DEM), in turn derived from LiDAR data). A Relative Elevation Model is a representation of the elevation of the terrain relative to a specific reference level, typically a river. In this way, it is different from a DEM –which shows absolute elevation values– as a REM highlights the relative heights of terrain features, making it easier to understand the topographic context of a landscape. Although typically used for monitoring wild rivers, they can help in assessing areas susceptible to flooding in highly controlled river enviornments like those in the Netherlands. </p>
+							<p>The aim of this assignment is to create a Relative Elevation Model (REM) derived from a Digital Terrain Model, in turn derived from LiDAR data. A Relative Elevation Model is a representation of the elevation of the terrain relative to a specific reference level, typically a river. In this way, it is different from a DEM –which shows absolute elevation values– as a REM highlights the relative heights of terrain features, making it easier to understand the topographic context of a landscape. Although typically used for monitoring wild rivers, they can help in assessing areas susceptible to flooding in highly controlled river enviornments like those in the Netherlands. </p>
+
+							h3>Data Collection</h3>
+							<p> DTM files were downloaded from the TU Delft GeoTiles project. </p> 
 
 							<h2>The Process</h2>
 							<p> 1. I selected Texel as the mapping area because I wanted to see how the dykes and the National Park Dunes of Texel would impact the elevation of the river and nearby towns, as well as the risk of flooding of the Buitenzwim river. <br>
-							2. I uploaded the DTM files onto ArcGIS; then merged them to create one continous raster, thus simplifying analysis and visualization of the data. <br>
-							3. I adjusted the stretch and color scheme for increase clarity and ensure the river elevation was set to 0 as a reference point <br>
-							4. I added a cross section layer consisting of lines perpendicular to the Buitenzwim river. For these, I estimated Z values going from high to low to demosntrate the downstream flow of the river towards the sea. <br>
-							5. I ran a TIN interpolation, calculated a new raster layer and played with the symbology of this layer for clearest results possible. 
+							2. I uploaded the DTM files onto ArcGIS; then merged them to create one continuous raster, thus simplifying analysis and visualization of the data. <br>
+							3. I adjusted the stretch and color scheme for increased clarity and ensure the river elevation was set to 0 as a reference point <br>
+							4. I added a cross-section layer consisting of lines perpendicular to the Buitenzwim river. For these, I estimated Z values going from high to low to demonstrate the downstream flow of the river towards the sea. <br>
+							5. I ran a TIN interpolation, calculated a new raster layer and played with the symbology of this layer for the clearest results possible. 
 							</p>
 
-							<h3>Data Collection</h3>
-							<p> DTM files were downloaded from GeoTiles TU Delft </p>
+							<h2>What can be seen</h2>
+							<p> What can be seen: <br>
+							- Natural (but managed) form of flood prevention: National Park Dunes of Texel and the Eirlandse duinen nature preserve are at significantly higher elevations <br>
+							- Man-made flood prevention: dykes also at high elevations to protect low lying areas from sea and river flooding <br>
+							- Areas surrounding the Buitenzwim are at low elevation, indicating a high risk of flooding. This does not include the main town of Oosterend. <br>
+							- Dark orange spot at the end of the river represents lowest elevation and corresponds to Westerkolk lake and basin area, putting the Westerlok nature reserve at a high risk of flooding. <br>
+							</p>
 
 							<h3>Feedback and Tips</h3>
 							<p> From students and instructor.</p>
