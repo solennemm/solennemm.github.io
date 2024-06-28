@@ -50,14 +50,17 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<h1>Carbon Sequestration Map</h1>
+							<h1>Carbon Sequestration in Santiago Metropolitan Region, Chile.</h1>
 							<iframe src="https://ee-mmsolenne.projects.earthengine.app/view/carbonseq" width="100%" height="800px" frameborder="0" style="border:0" allowfullscreen>iFrames are not supported on this page.</iframe>
 
-							<p>TRIAL eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique.</p>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel venenatis mauris vehicula hendrerit.</p>
-
 							<h3>The Assignment</h3>
-							<p>The aim of this assignment is to create a choropleth map using one of the United Nations Sustainable Development Goals (SDGs) indicator data and QGIS. By mapping SDG indicators, we can identify trends and patterns that may not be as clear from raw data and use this knowledge to inform policy and decision making. As such, the assignment not only helps in learning how to use QGIS for the first time, it also helps understand regional variations in the indicator of choice. </p>
+							<p>The aim of this assignment is to create an interactive map using Google Earth Engine (GEE) to visualize carbon sequestration and high carbon density areas to better inform carbon offset efforts. For this, two laters were created: gross primary production (GPP) and aboveground carbon density (ACD). GPP is defined as the total amount of carbon dioxide converted into glucose via photosynthesis (in an ecosystem, over a specific period of time) and represents the total rate of photosynthesis, allowing for the assessment of an area’s potential to uptake and store carbon. The area may then be managed to offset carbon emissions elsewhere. Additionally, ACD represents the amount of carbon stored in the living biomass of vegetation above the soil. Areas with a high ACD will thus usually be prime targets for conservation and carbon offset efforts. 
+
+							Combining both variables allows policymakers to prioritize areas that will result in the most effective carbon offset results. 
+							</p>
+
+							<h3>Data Collection</h3>
+							<p>Above-Ground biomass data from SMR was obtained using the ESA biomass dataset for 2020.</p>
 
 							<h2>The Process</h2>
 							<p> 1. Identified Region of Interest (ROI) as SMR using geojson.io and converted it to a zipped SHP file. <br>
@@ -67,9 +70,19 @@
 							 5. Applied ROI to the CSPI code by updating the feature collection and replacing the default ROI. <br>
 							 6. Ran the GEE script. <br> </p>
 
+						<div class="image-container">
+           					 <span class="image"><img src="images/piccarb16.jpg" alt="" /></span>
+          					 <span class="image"><img src="images/piccarb2.jpg" alt="" /></span>
+            				<span class="image"><img src="images/piccarb3.jpg" alt="" /></span>
+       					 </div>
 
-							<h3>Data Collection</h3>
-							<p>Above-Ground biomass data from SMR was obtained using the ESA biomass dataset for 2020.</p>
+							 <h2>What can be seen</h2>
+							<p> 1. Identified Region of Interest (ROI) as SMR using geojson.io and converted it to a zipped SHP file. <br>
+							 2. Calculated the area using SHP area calculator script. <br>
+							 3. Located and downloaded the appropriate ESA biomass Geotiff file for the region of interest. <br>
+							 4. Incorporated it into the CSPI GEE code. <br>
+							 5. Applied ROI to the CSPI code by updating the feature collection and replacing the default ROI. <br>
+							 6. Ran the GEE script. <br> </p>
 
 							<h3>Feedback </h3>
 							<p>The SDG indicator data was cleaned to ensure it was easier to process and had fewer errors.</p>
