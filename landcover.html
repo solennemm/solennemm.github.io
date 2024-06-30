@@ -50,31 +50,17 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<h1>Land Cover Classification /h1>
+							<h1>Land Cover Classification <h1>
 
 							<h3>The Assignment</h3>
 							<p>The aim of this assignment is to gain experience in generating land cover classification maps using satellite imagery and remote sensing techniques. Given that there are countless different ways to classify land cover, this process is a key part of environmental monitoring.
 
 							The different techniques learned include supervised pixel-based classification, unsupervised object-based classification and unsupervised pixel-based classification. Supervised pixel-based classification allows the user to define specific land cover classes by providing training samples, from which the algorithm then classifies all the pixels in the image. Unsupervised object-based classification, on the other hand, groups pixels into objects (or segments) based on their spectral and spatial properties before classifying these objects into land cover classes without using user-defined training samples. Lastly, unsupervised pixel-based classification automatically groups pixels into clusters based on their spectral properties without any prior knowledge or training samples from the user. The assignment will cover the three techniques as well as the normalized difference vegetation index (NDVI). </p>
 
-
 							<h2>Unsupervised Pixel-Based Classification</h2>
 							<span class="image main"><img src="images/unsupervisedpixel.png" alt="Additional Analysis" /></span>								
-							<p>Legend:</p>
-							<ul>
-							    <li><strong>Class 0:</strong> Agriculture/Crops (Beige)</li>
-							    <li><strong>Class 1:</strong> Vegetation (Light green)</li>
-							    <li><strong>Class 2:</strong> Building (Yellow)</li>
-							    <li><strong>Class 3:</strong> Road (Grey)</li>
-							    <li><strong>Class 4:</strong> Forest/Trees (Dark Green)</li>
-							</ul>
-							<p> 1. Identified Region of Interest (ROI) as SMR using geojson.io and converted it to a zipped SHP file. <br>
-							 2. Calculated the area using SHP area calculator script. <br>
-							 3. Located and downloaded the appropriate ESA biomass Geotiff file for the region of interest. <br>
-							 4. Incorporated it into the CSPI GEE code. <br>
-							 5. Applied ROI to the CSPI code by updating the feature collection and replacing the default ROI. <br>
-							 6. Ran the GEE script. <br> </p>
-
+							<p>
+							The unsupervised pixel-based classification method uses clustering algorithms to group pixels with similar spectral properties into distinct classes without prior knowledge. This method is thus highly automated, requiring no prior training data and simplifying the process for a quick preliminary or exploratory analysis. However, it requires post-classification interpretation to assign meaningful labels, and offers less control due to the lack of training data. While the unsupervised pixel-based method provides a broad overview of land cover types, it may misclassify certain areas due to spectral similarities among different land cover types. This is seen with the distribution of forests in non-forested areas around the map, caused by the very similar spectral profiles of forests and roads. This risk for missclassification makes it best suited for quick, exploratory studies where high accuracy is not the main priority.</p>
 
 							<h3>Unsupervised Object-Based Classification</h3>
 							<span class="image main"><img src="images/unsupervisedobject.png" alt="" /></span>
@@ -86,11 +72,18 @@
 							    <li><strong>Class 3:</strong> Urban/Road (Purple)</li>
 							    <li><strong>Class 4:</strong> Forest/Trees (Light Green)</li>
 							</ul>
-							<p>Above-Ground biomass data from SMR was obtained using the ESA biomass dataset for 2020.</p>
+							<p>The unsupervised object-based classification groups pixels into meaningful objects based on both spectral and spatial properties before classifying them.  This means it considers the spatial relationship between pixels, which results in more coherent and contextually meaningful classes. Less user input is needed, making it relatively straightforward to execute. As seen  on the map, this method reduces noise and the appearance of isolated pixels, creating a more homogenous map with less fragmentation than the unsupervised pixel-based classification. Overall, I found it provides a more contextually accurate classification compared to the pixel-based methods. </p>
 
 							<h3>Supervised Pixel-Based Classification </h3>
 							<span class="image main"><img src="images/supervisedpixel.png" alt="" /></span>
-							<p>The SDG indicator data was cleaned to ensure it was easier to process and had fewer errors.</p>
+							<p>The supervised pixel-based classification method uses user-defined training samples to classify the image based on known land cover types, achieving high accuracy. Users tend to have greater control over class definitions as well as outcomes, making it ideal for detailed analysis. It is important to note that the accuracy of the method nonetheless  heavily depends on the quality and representativeness of the training data. The  map illustrates the high precision of this method through the different distribution of forests in it: compared to unsupervised methods, less land cover is classified as forests in the bottom left corner, where little forest is indeed present. This method is therefore preferred when the highest accuracy is needed, and there is sufficient knowledge and resources to gather quality training data. Because of this accuracy the method was my favorite one to perform. I found it fascinating to be able to put to use my local knowledge to train the algorithm into recognizing certain land cover types. </p>
+
+							<h2>Normalized Difference Vegetation Index (NDVI)</h2>
+							<span class="image main"><img src="images/ndvi.png" alt="" /></span>
+							<p>The Normalized Difference Vegetation Index (NDVI) is a remote sensing index used to measure and monitor vegetation health, density, and vigor. It is calculated using the visible and near-infrared (NIR) bands of the electromagnetic spectrum from satellite sensors. It is a crucial tool in environmental monitoring, enabling the protection of dense and healthy vegetation as well as the prioritization of unhealthy vegetated areas for improvement. Interestingly, the resulting map shows the healthiest vegetation (darkest shade of green) at the border of what the supervised pixel-based classification showed was forest and cultivated land. Although this was surprising at first, it actually corresponds to the "edge effect" phenomenon in ecology, where changes in population or community structures occur at the boundary of two or more habitats. Here, the edge effect may create microenvironments that support high vegetation vigor. Microenvironments could include microclimates where forest edges provide wind protection and increased humidity to adjacent cultivated land, enhancing its health. The border areas might also have reduced competition for resources compared to the dense interior of forests or cultivated fields, which allows vegetation at the edges to thrive. <p>
+							<p>Comparatively urban areas are seen as a light shade of greenm shwoing a decrease in gevetation health with increased urbanization. This can be explain by the lack of green spaces in urban areas, but also by their fragmentation (fragmented habitats throughout the city are less resilient to environemntal stressesand therefore less capable of supporting healthy vegetation). Decreased soil quality, water stress and higher levels of air pollutants all contribute further to a decrease in vegetation health. <p>
+							<p>Lastly, water bodies are shown as dark purple due to their very low reflectance in the near-infrared band and higher reflectance in the red band which leads to low NDVI values overall. The presence of water indicated by the NDVI map alignes correclty with the supervosed pixel-based classification. <p>
+
 
 						</div>
 					</div>
