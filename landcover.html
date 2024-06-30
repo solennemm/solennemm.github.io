@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Land Cover Classification</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Map Portfolio</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="generic.html">Ipsum veroeros</a></li>
+							<li><a href="generic.html">Tempus etiam</a></li>
+							<li><a href="generic.html">Consequat dolor</a></li>
+							<li><a href="elements.html">Elements</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Land Cover Classification /h1>
+
+							<h3>The Assignment</h3>
+							<p>The aim of this assignment is to gain experience in generating land cover classification maps using satellite imagery and remote sensing techniques. Given that there are countless different ways to classify land cover, this process is a key part of environmental monitoring.
+
+							The different techniques learned include supervised pixel-based classification, unsupervised object-based classification and unsupervised pixel-based classification. Supervised pixel-based classification allows the user to define specific land cover classes by providing training samples, from which the algorithm then classifies all the pixels in the image. Unsupervised object-based classification, on the other hand, groups pixels into objects (or segments) based on their spectral and spatial properties before classifying these objects into land cover classes without using user-defined training samples. Lastly, unsupervised pixel-based classification automatically groups pixels into clusters based on their spectral properties without any prior knowledge or training samples from the user. The assignment will cover the three techniques as well as the normalized difference vegetation index (NDVI). </p>
+
+
+							<h2>Unsupervised Pixel-Based Classification</h2>
+							<span class="image main"><img src="images/pic16.jpg" alt="" /></span>
+							<p> 1. Identified Region of Interest (ROI) as SMR using geojson.io and converted it to a zipped SHP file. <br>
+							 2. Calculated the area using SHP area calculator script. <br>
+							 3. Located and downloaded the appropriate ESA biomass Geotiff file for the region of interest. <br>
+							 4. Incorporated it into the CSPI GEE code. <br>
+							 5. Applied ROI to the CSPI code by updating the feature collection and replacing the default ROI. <br>
+							 6. Ran the GEE script. <br> </p>
+
+
+							<h3>Unsupervised Object-Based Classification</h3>
+							<span class="image main"><img src="images/pic16.jpg" alt="" /></span>
+							<p>Above-Ground biomass data from SMR was obtained using the ESA biomass dataset for 2020.</p>
+
+							<h3>Supervised Pixel-Based Classification </h3>
+							<span class="image main"><img src="images/pic16.jpg" alt="" /></span>
+							<p>The SDG indicator data was cleaned to ensure it was easier to process and had fewer errors.</p>
+
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<section>
+								<h2>Get in touch</h2>
+								<form method="post" action="#">
+									<div class="fields">
+										<div class="field half">
+											<input type="text" name="name" id="name" placeholder="Name" />
+										</div>
+										<div class="field half">
+											<input type="email" name="email" id="email" placeholder="Email" />
+										</div>
+										<div class="field">
+											<textarea name="message" id="message" placeholder="Message"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send" class="primary" /></li>
+									</ul>
+								</form>
+							</section>
+							<section>
+								<h2>Follow</h2>
+								<ul class="icons">
+									<li><a href="#" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-dribbble"><span class="label">Dribbble</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-500px"><span class="label">500px</span></a></li>
+									<li><a href="#" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
+									<li><a href="#" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+								</ul>
+							</section>
+							<ul class="copyright">
+								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
