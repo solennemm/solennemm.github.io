@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Carbon Sequestration</title>
+		<title> Sea Level Rise Simulation</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -53,60 +53,34 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<h1>Carbon Sequestration in Santiago Metropolitan Region, Chile.</h1>
-							 <iframe src="https://ee-mmsolenne.projects.earthengine.app/view/carbonseq" width="100%" height="800px" frameborder="0" style="border:0; margin-bottom: 20px;" allowfullscreen>iFrames are not supported on this page.</iframe>
+							<h1> Sea Level Rise Simulation Map</h1>
+							<iframe src="https://ee-mmsolenne.projects.earthengine.app/view/sea-level-rise-and-land-cover" width="100%" height="800px" frameborder="0" style="border:0" allowfullscreen>iFrames are not supported on this page.</iframe>
 
 							<h3>The Assignment</h3>
-							<p>The aim of this assignment is to create an interactive map using Google Earth Engine (GEE) to visualize carbon sequestration and high carbon density areas to better inform carbon offset efforts. For this, two laters were created: gross primary production (GPP) and aboveground carbon density (ACD). GPP is defined as the total amount of carbon dioxide converted into glucose via photosynthesis (in an ecosystem, over a specific period of time) and represents the total rate of photosynthesis, allowing for the assessment of an area’s potential to uptake and store carbon. The area may then be managed to offset carbon emissions elsewhere. Additionally, ACD represents the amount of carbon stored in the living biomass of vegetation above the soil. Areas with a high ACD will thus usually be prime targets for conservation and carbon offset efforts. 
-
-							Combining both variables allows policymakers to prioritize areas that will result in the most effective carbon offset results. 
-							</p>
+							<p> Inspired by the assignment on land cover classification methods and the Google Earth Engine carbon sequestration map, I decided to create a sea level rise simulation coupled with a land cover type map. Coupling them allows decision makers to understand which areas will be most affected by sea level rise, what land cover type they represents and in what time frame they will be subject to becoming "drown areas". This app is focused on the island of Fiji as it is part of the group of Small Island Devloping States most vulnerable to sea level rise. </p>
 
 							<h3>Data Collection</h3>
-							<p>Above-Ground biomass data from SMR was obtained using the ESA biomass dataset for 2020.</p>
+							<p> Land cover: ESA World Land COver 2020 <br>
+								Elevation: NASADEM Digital Elevation 30m
 
 							<h2>The Process</h2>
-							<p> 1. Identified Region of Interest (ROI) as SMR using geojson.io and converted it to a zipped SHP file. <br>
-							 2. Calculated the area using SHP area calculator script. <br>
-							 3. Located and downloaded the appropriate ESA biomass Geotiff file for the region of interest. <br>
-							 4. Incorporated it into the CSPI GEE code. <br>
-							 5. Applied ROI to the CSPI code by updating the feature collection and replacing the default ROI. <br>
-							 6. Ran the GEE script. <br> </p>
+							<p> 1. Defined the area of interest (AOI) as Fiji using a feature collection. <br>
+								2. Added ESA WorldCover 2020 land cover data, clipped it to the AOI, and visualized it with a specified color palette. <br>
+								3. Added NASADEM elevation data, clipped it to the AOI, and created hillshade and DEM visualizations. <br>
+								4. Developed a sea level rise simulation function based on sea level rise per year and target year. <br>
+								5. Implemented UI sliders for dynamic control of sea level rise and target year. <br>
+								6. Created and added legends for land cover, elevation, and simulated sea level rise to the map. <br>
+								7. Ran the GEE script to visualize land cover, elevation, and sea level rise simulation for the AOI. <br></p>
 
-						<div class="image-container">
-           					 <span class="image"><img src="images/piccarb1.jpg" alt="" /></span>
-          					 <span class="image"><img src="images/piccarb2.jpg" alt="" /></span>
-            				<span class="image"><img src="images/piccarb3.jpg" alt="" /></span>
-       					 </div>
-
-							 <h2>What can be seen</h2>
-							<p> As indicated by the arrows, the south west corner of the region has the highest GPP (0.3) and AGD (150) values. Increased GPP and ACD represent a significant level of carbon assimilation and storage, indicating highly productive and carbon-rich ecosystems that could be highly effective in carbon offset efforts. Interestingly, the chosen area corresponds to an already established and well forested park called Cerro Cantillana, meaning it would be procedurally doable to convert it into a protected conservation area. <br> </p>
+							<h2>What can be seen</h2>
+							<p> According to the simulation, north-west areas (around Ba) and south-east areas (around Suva) of Viti Levu, Fiji's largest and main island, are most susceptible to become drown areas by 2100. In the north-west, these are shown to be mostly permanent water bodies, grasslands and mangrove forests. In the south-east, they are shown to be mostly mangroves and moss and lichen environments. It is important to note that this remains a hypothetical scenario, which includes many assumptions. For isnatnce, the simulation assumes that sea level rise increases linearly, 
+							and that the land cover will kept the same all the way until 2100, an unlikely event given rates urbanization and deforestation. The binary classfication of "drowned areas" versus "non-drowned areas" does not account for local variations in topography and the presence of protective infrastructure. Nonetheless, it is valuable information to determine which areas to prioritize in climate and sea level rise adaptation efforts. 
 
 							<h3>Feedback </h3>
-							<p>From students and instructor.</p>
-							
+							<p> From students and instructor. </p>
+							<span class="image main"><img src="images/pic16.jpg" alt="" /></span>
 						</div>
 					</div>
-
-
-					<style>
-					.image-container {
-    					display: flex;
-    					justify-content: space-between;
-    					margin-bottom: 20px; /* Add bottom margin here */
-					}
-
-					.image-container .image {
-    					flex: 1;
-   						margin: 0 10px;
-					}
-
-					.image-container .image img {
-    					width: 100%;
-    					height: auto;
-   						display: block;
-					}
-					</style>
 
 				<!-- Footer -->
 					<footer id="footer">
